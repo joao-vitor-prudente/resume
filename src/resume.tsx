@@ -1,5 +1,6 @@
 import { Document, Page, Text, View } from "@react-pdf/renderer";
 
+import { Brazil, China, UnitedStates } from "@/components/flags";
 import { Beef } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
 import { styles, typography } from "@/styles.ts";
@@ -32,6 +33,9 @@ export function Resume() {
                 <TextWithIcon Icon={Beef} variant="body">
                   Body
                 </TextWithIcon>
+                <Brazil />
+                <UnitedStates />
+                <China />
               </View>
             </View>
           </View>
