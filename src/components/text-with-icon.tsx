@@ -1,8 +1,8 @@
 import type { ComponentProps, ComponentType, ReactNode } from "react";
 
-import { type Svg, Text, View } from "@react-pdf/renderer";
+import { StyleSheet, type Svg, Text, View } from "@react-pdf/renderer";
 
-import { colors, fontSizes, spacings, typography } from "@/styles.ts";
+import { colors, spacings, typography } from "@/styles.ts";
 
 interface TextWithIconProps {
   readonly children: ReactNode;
@@ -14,30 +14,41 @@ type Variants = "body" | "cardTitle" | "sectionTitle";
 
 const iconConfig: Record<Variants, ComponentProps<typeof Svg>> = {
   body: {
-    height: fontSizes.body,
+    height: typography.body.fontSize,
     stroke: colors.foregroundMuted,
     strokeWidth: 1.8,
-    width: fontSizes.body,
+    width: typography.body.fontSize,
   },
   cardTitle: {
-    height: fontSizes.cardTitle,
+    height: typography.cardTitle.fontSize,
     stroke: colors.foregroundMuted,
     strokeWidth: 2,
-    width: fontSizes.cardTitle,
+    width: typography.cardTitle.fontSize,
   },
   sectionTitle: {
-    height: fontSizes.sectionTitle,
+    height: typography.sectionTitle.fontSize,
     stroke: colors.foreground,
     strokeWidth: 2,
-    width: fontSizes.sectionTitle,
+    width: typography.sectionTitle.fontSize,
   },
 };
 
+const containerStyles = StyleSheet.create({
+  body: { flexDirection: "row", gap: spacings.sm },
+  cardTitle: { flexDirection: "row", gap: spacings.sm },
+  sectionTitle: {
+    alignItems: "center",
+    flexDirection: "row",
+    gap: spacings.sm,
+  },
+});
+
 export function TextWithIcon(props: TextWithIconProps) {
+  const variant = props.variant ?? "body";
   return (
-    <View style={{ flexDirection: "row", gap: spacings.sm }}>
-      <props.Icon {...iconConfig[props.variant ?? "body"]} />
-      <Text style={typography[props.variant ?? "body"]}>{props.children}</Text>
+    <View style={containerStyles[variant]}>
+      <props.Icon {...iconConfig[variant]} />
+      <Text style={typography[variant]}>{props.children}</Text>
     </View>
   );
 }

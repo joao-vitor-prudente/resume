@@ -1,41 +1,11 @@
 import { Font, StyleSheet } from "@react-pdf/renderer";
 
-import RobotoCondensedBold from "@/assets/fonts/roboto/roboto-condensed-bold.ttf";
-import RobotoCondensedMedium from "@/assets/fonts/roboto/roboto-condensed-medium.ttf";
-import RobotoCondensedRegular from "@/assets/fonts/roboto/roboto-condensed-regular.ttf";
-import RobotoCondensedSemibold from "@/assets/fonts/roboto/roboto-condensed-semibold.ttf";
-import RobotoRegular from "@/assets/fonts/roboto/roboto-regular.ttf";
+import { font, weight } from "@/assets/fonts";
+import { oswaldFamily } from "@/assets/fonts/oswald";
+import { sourceSansProFamily } from "@/assets/fonts/source-sans-pro";
 
-const fonts = {
-  roboto: "Roboto",
-  robotoCondensed: "RobotoCondensed",
-} as const;
-
-Font.register({
-  family: fonts.roboto,
-  fontWeight: "normal",
-  src: RobotoRegular,
-});
-Font.register({
-  family: fonts.robotoCondensed,
-  fontWeight: "bold",
-  src: RobotoCondensedBold,
-});
-Font.register({
-  family: fonts.robotoCondensed,
-  fontWeight: "semibold",
-  src: RobotoCondensedSemibold,
-});
-Font.register({
-  family: fonts.robotoCondensed,
-  fontWeight: "medium",
-  src: RobotoCondensedMedium,
-});
-Font.register({
-  family: fonts.robotoCondensed,
-  fontWeight: "normal",
-  src: RobotoCondensedRegular,
-});
+oswaldFamily.forEach(Font.register);
+sourceSansProFamily.forEach(Font.register);
 
 export const colors = {
   background: "#fafafa",
@@ -45,77 +15,68 @@ export const colors = {
   foregroundMuted: "#52525c",
 } as const;
 
-export const fontSizes = {
-  body: "10pt",
-  cardSubtitle: "12pt",
-  cardTitle: "12pt",
-  sectionTitle: "16pt",
-  subtitle: "16pt",
-  title: "32pt",
-} as const;
-
 export const spacings = {
-  lg: "16pt",
-  md: "8pt",
-  sm: "4pt",
-  xl: "32pt",
-  xs: "2pt",
-};
+  lg: 16,
+  md: 8,
+  sm: 4,
+  xl: 32,
+  xs: 2,
+} as const;
 
 export const typography = StyleSheet.create({
   body: {
     color: colors.foreground,
-    fontFamily: fonts.roboto,
-    fontSize: fontSizes.body,
-    fontWeight: "normal",
-    letterSpacing: "0.01",
-    lineHeight: "1.5",
+    fontFamily: font.source,
+    fontSize: 8,
+    fontWeight: weight.regular,
+    letterSpacing: 0.01,
+    lineHeight: 1.5,
   },
   bodyMuted: {
     color: colors.foregroundMuted,
-    fontFamily: fonts.roboto,
-    fontSize: fontSizes.body,
-    fontWeight: "normal",
-    letterSpacing: "0.01",
-    lineHeight: "1.5",
+    fontFamily: font.source,
+    fontSize: 8,
+    fontWeight: weight.regular,
+    letterSpacing: 0.01,
+    lineHeight: 1.5,
   },
   cardSubtitle: {
     color: colors.foregroundMuted,
-    fontFamily: fonts.robotoCondensed,
-    fontSize: fontSizes.cardSubtitle,
-    fontWeight: "medium",
-    lineHeight: "1.2",
+    fontFamily: font.source,
+    fontSize: 8,
+    fontWeight: weight.medium,
+    lineHeight: 1.2,
   },
   cardTitle: {
     color: colors.foreground,
-    fontFamily: fonts.robotoCondensed,
-    fontSize: fontSizes.cardTitle,
-    fontWeight: "semibold",
-    lineHeight: "1.2",
+    fontFamily: font.source,
+    fontSize: 9,
+    fontWeight: weight.semibold,
+    lineHeight: 1.2,
   },
   sectionTitle: {
     color: colors.foreground,
-    fontFamily: fonts.robotoCondensed,
-    fontSize: fontSizes.sectionTitle,
-    fontWeight: "bold",
-    letterSpacing: "0.03",
-    lineHeight: "1.2",
+    fontFamily: font.oswald,
+    fontSize: 10,
+    fontWeight: weight.semibold,
+    letterSpacing: 0.03,
+    lineHeight: 1.2,
   },
   subtitle: {
     color: colors.foregroundMuted,
-    fontFamily: fonts.robotoCondensed,
-    fontSize: fontSizes.subtitle,
-    fontWeight: "medium",
-    letterSpacing: "0.02",
-    lineHeight: "1.3",
+    fontFamily: font.source,
+    fontSize: 8,
+    fontWeight: weight.regular,
+    letterSpacing: 0.02,
+    lineHeight: 1.3,
   },
   title: {
     color: colors.foreground,
-    fontFamily: fonts.robotoCondensed,
-    fontSize: fontSizes.title,
-    fontWeight: "bold",
-    letterSpacing: "-0.01",
-    lineHeight: "1.1",
+    fontFamily: font.oswald,
+    fontSize: 40,
+    fontWeight: weight.light,
+    letterSpacing: -0.01,
+    lineHeight: 1.1,
   },
 });
 
@@ -146,13 +107,13 @@ export const styles = StyleSheet.create({
   pageFooter: {
     borderTopColor: colors.border,
     borderTopStyle: "solid",
-    borderTopWidth: "1pt",
+    borderTopWidth: 1,
     flexDirection: "column",
   },
   pageHeader: {
     borderBottomColor: colors.border,
     borderBottomStyle: "solid",
-    borderBottomWidth: "1pt",
+    borderBottomWidth: 1,
     flexDirection: "column",
     gap: spacings.lg,
   },
