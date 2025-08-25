@@ -18,5 +18,6 @@ export { Palette } from "@/components/icons/palette.tsx";
 export { Phone } from "@/components/icons/phone.tsx";
 export { Pi } from "@/components/icons/pi.tsx";
 export { Python } from "@/components/icons/python.tsx";
+export { Separator } from "@/components/icons/separator.tsx";
 export { University } from "@/components/icons/university.tsx";
 export { User } from "@/components/icons/user.tsx";

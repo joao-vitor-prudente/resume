@@ -110,13 +110,6 @@ export const styles = StyleSheet.create({
     borderTopWidth: 1,
     flexDirection: "column",
   },
-  pageHeader: {
-    borderBottomColor: colors.border,
-    borderBottomStyle: "solid",
-    borderBottomWidth: 1,
-    flexDirection: "column",
-    gap: spacings.lg,
-  },
   section: {
     flexDirection: "column",
     gap: spacings.lg,
