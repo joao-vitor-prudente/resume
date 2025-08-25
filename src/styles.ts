@@ -112,10 +112,10 @@ export const styles = StyleSheet.create({
   },
   section: {
     flexDirection: "column",
-    gap: spacings.lg,
+    gap: spacings.md,
   },
   sectionContent: {
     flexDirection: "column",
-    gap: spacings.md,
+    gap: spacings.sm,
   },
 });

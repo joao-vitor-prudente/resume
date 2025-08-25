@@ -1,6 +1,6 @@
 import { Document, Page } from "@react-pdf/renderer";
 
-import { Header } from "@/components/resume-sections";
+import { Header, Profile } from "@/components/resume-sections";
 import { me } from "@/me.ts";
 import { styles } from "@/styles.ts";
 
@@ -9,6 +9,7 @@ export function Resume() {
     <Document title="Resume">
       <Page size="A4" style={styles.page}>
         <Header {...me.about} {...me.contactInfo} />
+        <Profile {...me.about} />
       </Page>
     </Document>
   );
