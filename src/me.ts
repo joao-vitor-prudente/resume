@@ -22,12 +22,6 @@ export interface About {
   profile: string;
 }
 
-export interface Capability {
-  description: string;
-  icon: ComponentType<ComponentProps<typeof Svg>>;
-  title: string;
-}
-
 export interface ContactInfo {
   address: string;
   email: string;
@@ -63,19 +57,25 @@ export interface Language {
 
 export interface Me {
   about: About;
-  capabilities: Capability[];
   contactInfo: ContactInfo;
   courses: Course[];
   employmentHistory: Job[];
   hobbies: Hobby[];
   languages: Language[];
   references: Reference[];
+  skills: Skill[];
 }
 
 export interface Reference {
   company: string;
   contactInfo: Pick<ContactInfo, "email" | "phone">;
   name: string;
+}
+
+export interface Skill {
+  description: string;
+  icon: ComponentType<ComponentProps<typeof Svg>>;
+  title: string;
 }
 
 export const me: Me = {
@@ -85,44 +85,6 @@ export const me: Me = {
     profile:
       "Engenheiro de software full-stack com quatro anos de experiência profissional na área, altamente capacitado em projetar e implementar soluções robustas para desafios complexos de negócio. Excepcionalmente organizado, metódico e detalhista, com paixão por programação e entrega de código de alta qualidade. Experiência inclui prática em sistemas distribuídos baseados em eventos, modelagem de domínio e de dados, além de design e desenvolvimento de UI. Um comunicador claro e sistemático, capaz de articular problemas, soluções e arquitetura de sistemas de maneira precisa e acessível. Dedicado a manter consistência e excelência em todos os aspectos do desenvolvimento de software.",
   },
-  capabilities: [
-    {
-      description:
-        "Trabalhei com desenvolvimento backend em Django, desenvolvimento de ETLs incluindo web scraping e pipeline de dados, implementação de redes neurais, tanto do zero quanto utilizando frameworks como Tensorflow e criação UIs para desktop com Eel.",
-      icon: Python,
-      title: "Python",
-    },
-    {
-      description:
-        "Trabalhei com desenvolvimento backend em NestJS e ExpressJS, frontend em ReactJS, fullstack em NextJs e mobile em ReactNative, com destaque no desenvolvimento frontend.",
-      icon: Javascript,
-      title: "Javascript/Typescript",
-    },
-    {
-      description:
-        "Trabalhei com bancos de dados Postgres, SQLite e MySQL tanto na modelagem de dados, quanto no provisionamento em nuvem.",
-      icon: Database,
-      title: "Banco de Dados",
-    },
-    {
-      description:
-        "Trabalhei com Arquitetura Dirigida por Eventos, Design Dirigido por Domínio e Desenvolvimento Dirigido por Testes.",
-      icon: Building,
-      title: "Arquitetura",
-    },
-    {
-      description:
-        "Trabalhei com AWS e Vercel e implementei pipelines de dev-ops utilizando tanto GitLab, quanto o GitHub.",
-      icon: Cloud,
-      title: "Infraestrutura",
-    },
-    {
-      description:
-        "Trabalhei com Dart/Flutter para desenvolvimento Android e brevemente com C, C#/Unity para desenvolvimento de jogos e Rust para desenvolvimento de CLIs.",
-      icon: CircleEllipsis,
-      title: "Outras Linguagens",
-    },
-  ],
   contactInfo: {
     address: "SHIN QI 3 conjunto 9, 24, Brasília, 71505-290, Brasil",
     email: "jvitor.prudente@gmail.com",
@@ -240,6 +202,44 @@ export const me: Me = {
         phone: "+55 (61) 99968-8311",
       },
       name: "Diogo Lisita",
+    },
+  ],
+  skills: [
+    {
+      description:
+        "Trabalhei com desenvolvimento backend em Django, desenvolvimento de ETLs incluindo web scraping e pipeline de dados, implementação de redes neurais, tanto do zero quanto utilizando frameworks como Tensorflow e criação UIs para desktop com Eel.",
+      icon: Python,
+      title: "Python",
+    },
+    {
+      description:
+        "Trabalhei com desenvolvimento backend em NestJS e ExpressJS, frontend em ReactJS, fullstack em NextJs e mobile em ReactNative, com destaque no desenvolvimento frontend.",
+      icon: Javascript,
+      title: "Javascript/Typescript",
+    },
+    {
+      description:
+        "Trabalhei com bancos de dados Postgres, SQLite e MySQL tanto na modelagem de dados, quanto no provisionamento em nuvem.",
+      icon: Database,
+      title: "Banco de Dados",
+    },
+    {
+      description:
+        "Trabalhei com Arquitetura Dirigida por Eventos, Design Dirigido por Domínio e Desenvolvimento Dirigido por Testes.",
+      icon: Building,
+      title: "Arquitetura",
+    },
+    {
+      description:
+        "Trabalhei com AWS e Vercel e implementei pipelines de dev-ops utilizando tanto GitLab, quanto o GitHub.",
+      icon: Cloud,
+      title: "Infraestrutura",
+    },
+    {
+      description:
+        "Trabalhei com Dart/Flutter para desenvolvimento Android e brevemente com C, C#/Unity para desenvolvimento de jogos e Rust para desenvolvimento de CLIs.",
+      icon: CircleEllipsis,
+      title: "Outras Linguagens",
     },
   ],
 };

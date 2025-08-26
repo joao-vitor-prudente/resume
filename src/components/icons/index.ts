@@ -19,5 +19,6 @@ export { Phone } from "@/components/icons/phone.tsx";
 export { Pi } from "@/components/icons/pi.tsx";
 export { Python } from "@/components/icons/python.tsx";
 export { Separator } from "@/components/icons/separator.tsx";
+export { Toolbox } from "@/components/icons/toolbox.tsx";
 export { University } from "@/components/icons/university.tsx";
 export { User } from "@/components/icons/user.tsx";
