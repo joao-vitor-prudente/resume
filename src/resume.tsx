@@ -4,6 +4,7 @@ import {
   EmploymentHistory,
   Header,
   Profile,
+  References,
 } from "@/components/resume-sections";
 import { me } from "@/me.ts";
 import { styles } from "@/styles.ts";
@@ -18,6 +19,7 @@ export function Resume() {
       <Page size="A4" style={styles.page}>
         <Header {...me.about} {...me.contactInfo} />
         <EmploymentHistory employmentHistory={me.employmentHistory} />
+        <References references={me.references} />
       </Page>
     </Document>
   );
