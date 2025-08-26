@@ -9,9 +9,8 @@ sourceSansProFamily.forEach(Font.register);
 
 export const colors = {
   background: "#fafafa", // 50
-  backgroundMuted: "#e4e4e7", // 200
+  backgroundMuted: "#f4f4f5", // 100
   border: "#d4d4d8", // 300
-  decoration: "#71717b", // 400
   foreground: "#09090b", // 950
   foregroundMuted: "#52525c", // 600
 } as const;
@@ -55,7 +54,7 @@ export const typography = StyleSheet.create({
     fontFamily: font.source,
     fontSize: 9,
     fontWeight: weight.semibold,
-    letterSpacing: -0.02,
+    letterSpacing: -0.1,
     lineHeight: 1.2,
   },
   sectionTitle: {
@@ -129,7 +128,7 @@ export const styles = StyleSheet.create({
 
 export const listStyles = StyleSheet.create({
   list: {
-    borderLeftColor: colors.decoration,
+    borderLeftColor: colors.border,
     borderLeftStyle: "solid",
     borderLeftWidth: 0.5,
     flexDirection: "column",

@@ -12,7 +12,7 @@ interface PdfInterfaceProps {
 export function PdfInterface(props: PdfInterfaceProps) {
   return (
     <div style={{ display: "flex" }}>
-      <PDFViewer style={{ height: "64rem", width: "40rem" }}>
+      <PDFViewer style={{ height: "64rem", width: "120rem" }}>
         <props.document />
       </PDFViewer>
       <PDFDownloadLink
