@@ -7,9 +7,9 @@ export function Cloud(props: ComponentProps<typeof Svg>) {
     <Svg
       height="24"
       stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
       viewBox="0 0 24 24"
       width="24"
       {...props}
