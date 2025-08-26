@@ -37,7 +37,7 @@ const containerStyles = StyleSheet.create({
   body: { flexDirection: "row", gap: spacings.sm },
   cardTitle: { flexDirection: "row", gap: spacings.sm },
   sectionTitle: {
-    alignItems: "center",
+    alignItems: "flex-end",
     flexDirection: "row",
     gap: spacings.sm,
   },

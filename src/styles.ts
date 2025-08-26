@@ -8,11 +8,12 @@ oswaldFamily.forEach(Font.register);
 sourceSansProFamily.forEach(Font.register);
 
 export const colors = {
-  background: "#fafafa",
-  backgroundMuted: "#e4e4e7",
-  border: "#d4d4d8",
-  foreground: "#09090b",
-  foregroundMuted: "#52525c",
+  background: "#fafafa", // 50
+  backgroundMuted: "#e4e4e7", // 200
+  border: "#d4d4d8", // 300
+  decoration: "#71717b", // 400
+  foreground: "#09090b", // 950
+  foregroundMuted: "#52525c", // 600
 } as const;
 
 export const spacings = {
@@ -31,6 +32,7 @@ export const typography = StyleSheet.create({
     fontWeight: weight.regular,
     letterSpacing: 0.01,
     lineHeight: 1.5,
+    textAlign: "justify",
   },
   bodyMuted: {
     color: colors.foregroundMuted,
@@ -39,6 +41,7 @@ export const typography = StyleSheet.create({
     fontWeight: weight.regular,
     letterSpacing: 0.01,
     lineHeight: 1.5,
+    textAlign: "justify",
   },
   cardSubtitle: {
     color: colors.foregroundMuted,
@@ -52,15 +55,17 @@ export const typography = StyleSheet.create({
     fontFamily: font.source,
     fontSize: 9,
     fontWeight: weight.semibold,
+    letterSpacing: -0.02,
     lineHeight: 1.2,
   },
   sectionTitle: {
     color: colors.foreground,
     fontFamily: font.oswald,
     fontSize: 10,
-    fontWeight: weight.semibold,
+    fontWeight: weight.medium,
     letterSpacing: 0.03,
     lineHeight: 1.2,
+    textTransform: "uppercase",
   },
   subtitle: {
     color: colors.foregroundMuted,
@@ -69,14 +74,16 @@ export const typography = StyleSheet.create({
     fontWeight: weight.regular,
     letterSpacing: 0.02,
     lineHeight: 1.3,
+    textTransform: "uppercase",
   },
   title: {
     color: colors.foreground,
     fontFamily: font.oswald,
     fontSize: 40,
     fontWeight: weight.light,
-    letterSpacing: -0.01,
+    letterSpacing: -0.02,
     lineHeight: 1.1,
+    textTransform: "uppercase",
   },
 });
 
@@ -118,4 +125,16 @@ export const styles = StyleSheet.create({
     flexDirection: "column",
     gap: spacings.sm,
   },
+});
+
+export const listStyles = StyleSheet.create({
+  list: {
+    borderLeftColor: colors.decoration,
+    borderLeftStyle: "solid",
+    borderLeftWidth: 0.5,
+    flexDirection: "column",
+    gap: spacings.sm,
+    paddingLeft: spacings.md,
+  },
+  listItem: { ...typography.body, lineHeight: 1.2 },
 });

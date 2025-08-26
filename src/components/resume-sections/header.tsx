@@ -32,13 +32,13 @@ const separatorStyles: ComponentProps<typeof Separator> = {
 export function Header(props: About & ContactInfo) {
   return (
     <View style={headerStyles.container}>
-      <Text style={typography.title}>{props.name.toUpperCase()}</Text>
+      <Text style={typography.title}>{props.name}</Text>
       <View style={headerStyles.subtitleContainer}>
-        <Text style={typography.subtitle}>{props.position.toUpperCase()}</Text>
+        <Text style={typography.subtitle}>{props.position}</Text>
         <Separator {...separatorStyles} />
-        <Text style={typography.subtitle}>{props.address.toUpperCase()}</Text>
+        <Text style={typography.subtitle}>{props.address}</Text>
         <Separator {...separatorStyles} />
-        <Text style={typography.subtitle}>{props.phone.toUpperCase()}</Text>
+        <Text style={typography.subtitle}>{props.phone}</Text>
       </View>
     </View>
   );

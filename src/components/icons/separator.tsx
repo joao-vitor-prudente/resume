@@ -14,7 +14,7 @@ export function Separator(props: ComponentProps<typeof Svg>) {
       width="24"
       {...props}
     >
-      <Circle cx="12" cy="12" fill={props.stroke} r="6" />
+      <Circle cx="12" cy="12" fill={props.stroke ?? "currentColor"} r="6" />
     </Svg>
   );
 }
