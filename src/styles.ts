@@ -139,7 +139,9 @@ export const listStyles = StyleSheet.create({
 });
 
 // not having access display grid or calc sure is a pain :(
-export const twoColumnGridStyles = StyleSheet.create({
-  container: { flexDirection: "row", flexWrap: "wrap", margin: -spacings.md },
-  item: { padding: spacings.md, width: "50%" },
-});
+export function twoColumnGridStyles(gap: number, itemWidth = 50) {
+  return StyleSheet.create({
+    container: { flexDirection: "row", flexWrap: "wrap", margin: -gap },
+    item: { padding: gap, width: `${itemWidth.toString()}%` },
+  });
+}

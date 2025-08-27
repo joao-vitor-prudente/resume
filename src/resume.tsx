@@ -1,6 +1,7 @@
-import { Document, Page } from "@react-pdf/renderer";
+import { Document, Page, View } from "@react-pdf/renderer";
 
 import {
+  ContactInfo,
   EmploymentHistory,
   Header,
   Profile,
@@ -8,7 +9,7 @@ import {
   Skills,
 } from "@/components/resume-sections";
 import { me } from "@/me.ts";
-import { styles } from "@/styles.ts";
+import { spacings, styles, twoColumnGridStyles } from "@/styles.ts";
 
 export function Resume() {
   return (
@@ -16,7 +17,14 @@ export function Resume() {
       <Page size="A4" style={styles.page}>
         <Header {...me.about} {...me.contactInfo} />
         <Profile {...me.about} />
-        <Skills skills={me.skills} />
+        <View style={twoColumnGridStyles(spacings.xl).container}>
+          <View style={twoColumnGridStyles(spacings.xl, 34).item}>
+            <ContactInfo {...me.contactInfo} />
+          </View>
+          <View style={twoColumnGridStyles(spacings.xl, 66).item}>
+            <Skills skills={me.skills} />
+          </View>
+        </View>
       </Page>
       <Page size="A4" style={styles.page}>
         <Header {...me.about} {...me.contactInfo} />
