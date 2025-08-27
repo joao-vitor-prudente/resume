@@ -5,6 +5,7 @@ import {
   Courses,
   EmploymentHistory,
   Header,
+  Hobbies,
   Languages,
   Profile,
   References,
@@ -23,6 +24,7 @@ export function Resume() {
           <View style={twoColumnGridStyles(spacings.xl, 34).item}>
             <ContactInfo {...me.contactInfo} />
             <Languages languages={me.languages} />
+            <Hobbies hobbies={me.hobbies} />
           </View>
           <View style={twoColumnGridStyles(spacings.xl, 66).item}>
             <Skills skills={me.skills} />

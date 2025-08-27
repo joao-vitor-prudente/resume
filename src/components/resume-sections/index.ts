@@ -2,6 +2,7 @@ export { ContactInfo } from "@/components/resume-sections/contact-info.tsx";
 export { Courses } from "@/components/resume-sections/courses.tsx";
 export { EmploymentHistory } from "@/components/resume-sections/employment-history.tsx";
 export { Header } from "@/components/resume-sections/header.tsx";
+export { Hobbies } from "@/components/resume-sections/hobbies.tsx";
 export { Languages } from "@/components/resume-sections/languages.tsx";
 export { Profile } from "@/components/resume-sections/profile.tsx";
 export { References } from "@/components/resume-sections/references.tsx";
