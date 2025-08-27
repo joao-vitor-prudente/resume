@@ -2,6 +2,7 @@ import { Document, Page, View } from "@react-pdf/renderer";
 
 import {
   ContactInfo,
+  Courses,
   EmploymentHistory,
   Header,
   Languages,
@@ -27,6 +28,7 @@ export function Resume() {
             <Skills skills={me.skills} />
           </View>
         </View>
+        <Courses courses={me.courses} />
       </Page>
       <Page size="A4" style={styles.page}>
         <Header {...me.about} {...me.contactInfo} />

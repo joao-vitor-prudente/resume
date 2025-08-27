@@ -29,6 +29,7 @@ export interface ContactInfo {
 }
 
 export interface Course {
+  description: string;
   diplomaUrl?: string;
   institution: string;
   name: string;
@@ -92,6 +93,8 @@ export const me: Me = {
   },
   courses: [
     {
+      description:
+        "Programa de especialização com duração de 1 semestre abordando a fundo a matemática e os algorítmos por traz da inteligência artificial incluindo modelos de regressão, redes neurais comuns e de convolução, árvores de decisão, sistemas de recomendação e algoritmos genéticos.",
       diplomaUrl:
         "https://www.coursera.org/account/accomplishments/specialization/ZKB634W28J5U",
       institution: "Stanford University",
