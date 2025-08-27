@@ -1,8 +1,10 @@
+import type { ComponentProps } from "react";
+
 import { Path, Rect, Svg } from "@react-pdf/renderer";
 
-export function UnitedStates() {
+export function UnitedStates(props: ComponentProps<typeof Svg>) {
   return (
-    <Svg height="32" viewBox="0 0 32 32" width="32">
+    <Svg height="32" viewBox="0 0 32 32" width="32" {...props}>
       <Rect fill="#fff" height="24" rx="4" ry="4" width="30" x="1" y="4"></Rect>
       <Path
         d="M1.638,5.846H30.362c-.711-1.108-1.947-1.846-3.362-1.846H5c-1.414,0-2.65,.738-3.362,1.846Z"

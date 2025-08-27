@@ -1,10 +1,10 @@
+export function capitalize(str: string): string {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 export function formatDateRange(from: Date, to?: Date): string {
   if (!to) return `Desde ${formatDate(from)}`;
   return `${formatDate(to)} - ${formatDate(to)}`;
-}
-
-function capitalize(str: string): string {
-  return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 function formatDate(date: Date): string {

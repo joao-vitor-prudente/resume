@@ -1,4 +1,4 @@
-import type { ComponentProps, ComponentType, FC } from "react";
+import type { ComponentProps, ComponentType } from "react";
 
 import { Svg } from "@react-pdf/renderer";
 
@@ -50,7 +50,7 @@ export interface Job {
 }
 
 export interface Language {
-  flag: FC;
+  flag: ComponentType<ComponentProps<typeof Svg>>;
   name: string;
   proficiency: "advanced" | "beginner" | "fluent" | "native";
 }

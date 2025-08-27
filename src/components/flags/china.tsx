@@ -1,8 +1,10 @@
+import type { ComponentProps } from "react";
+
 import { Path, Rect, Svg } from "@react-pdf/renderer";
 
-export function China() {
+export function China(props: ComponentProps<typeof Svg>) {
   return (
-    <Svg height="32" viewBox="0 0 32 32" width="32">
+    <Svg height="32" viewBox="0 0 32 32" width="32" {...props}>
       <Rect
         fill="#db362f"
         height="24"

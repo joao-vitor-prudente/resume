@@ -1,8 +1,10 @@
+import type { ComponentProps } from "react";
+
 import { Circle, Path, Rect, Svg } from "@react-pdf/renderer";
 
-export function Brazil() {
+export function Brazil(props: ComponentProps<typeof Svg>) {
   return (
-    <Svg height="32" viewBox="0 0 32 32" width="32">
+    <Svg height="32" stroke="0.1" viewBox="0 0 32 32" {...props}>
       <Rect fill="#459a45" height="24" rx="4" ry="4" width="30" x="1" y="4" />
       <Path
         d="M27,4H5c-2.209,0-4,1.791-4,4V24c0,2.209,1.791,4,4,4H27c2.209,0,4-1.791,4-4V8c0-2.209-1.791-4-4-4Zm3,20c0,1.654-1.346,3-3,3H5c-1.654,0-3-1.346-3-3V8c0-1.654,1.346-3,3-3H27c1.654,0,3,1.346,3,3V24Z"
