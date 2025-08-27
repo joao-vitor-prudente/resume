@@ -1,9 +1,10 @@
 import { Text, View } from "@react-pdf/renderer";
 
-import type { Job } from "@/me.ts";
+import type { Job } from "@/me";
 
 import { BriefcaseBusiness } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
+import { translatedLayout } from "@/layout-translations.ts";
 import { listStyles, styles, typography } from "@/styles.ts";
 import { formatDateRange } from "@/utlis.ts";
 
@@ -15,7 +16,7 @@ export function EmploymentHistory(props: EmploymentHistoryProps) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={BriefcaseBusiness} variant="sectionTitle">
-        histórico empregatício
+        {translatedLayout.sectionTitle.employmentHistory}
       </TextWithIcon>
       <View style={styles.sectionContent}>
         {props.employmentHistory.map((job, index) => (

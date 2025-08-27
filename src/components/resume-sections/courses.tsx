@@ -1,9 +1,10 @@
 import { Link, Text, View } from "@react-pdf/renderer";
 
-import type { Course } from "@/me.ts";
+import type { Course } from "@/me";
 
 import { BookOpen, GraduationCap, Link as LinkIcon } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
+import { translatedLayout } from "@/layout-translations.ts";
 import { styles, typography } from "@/styles.ts";
 
 interface CoursesProps {
@@ -14,7 +15,7 @@ export function Courses(props: CoursesProps) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={GraduationCap} variant="sectionTitle">
-        cursos
+        {translatedLayout.sectionTitle.courses}
       </TextWithIcon>
       <View style={styles.sectionContent}>
         {props.courses.map((course, index) => (

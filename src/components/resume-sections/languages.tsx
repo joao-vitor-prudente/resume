@@ -1,9 +1,10 @@
 import { StyleSheet, Text, View } from "@react-pdf/renderer";
 
-import type { Language } from "@/me.ts";
+import type { Language } from "@/me";
 
 import { Languages as LanguagesIcon } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
+import { translatedLayout } from "@/layout-translations.ts";
 import { spacings, styles, typography } from "@/styles.ts";
 import { capitalize } from "@/utlis.ts";
 
@@ -15,7 +16,7 @@ export function Languages(props: LanguagesProps) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={LanguagesIcon} variant="sectionTitle">
-        idiomas
+        {translatedLayout.sectionTitle.languages}
       </TextWithIcon>
       <View style={styles.sectionContent}>
         {props.languages.map((language, index) => (
@@ -24,19 +25,6 @@ export function Languages(props: LanguagesProps) {
       </View>
     </View>
   );
-}
-
-function formatProficiency(proficiency: Language["proficiency"]): string {
-  switch (proficiency) {
-    case "advanced":
-      return "avançado";
-    case "beginner":
-      return "iniciante";
-    case "fluent":
-      return "fluente";
-    case "native":
-      return "nativo";
-  }
 }
 
 const languageStyles = StyleSheet.create({
@@ -57,7 +45,7 @@ function LanguageItem(props: Language) {
         <Text style={typography.body}>{props.name}</Text>
       </View>
       <Text style={typography.bodyMuted}>
-        {capitalize(formatProficiency(props.proficiency))}
+        {capitalize(translatedLayout.languageProficiency[props.proficiency])}
       </Text>
     </View>
   );

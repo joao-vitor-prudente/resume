@@ -1,9 +1,10 @@
 import { View } from "@react-pdf/renderer";
 
-import type { Hobby } from "@/me.ts";
+import type { Hobby } from "@/me";
 
 import { Palette } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
+import { translatedLayout } from "@/layout-translations.ts";
 import { styles } from "@/styles.ts";
 
 interface HobbiesProps {
@@ -14,7 +15,7 @@ export function Hobbies(props: HobbiesProps) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={Palette} variant="sectionTitle">
-        hobbies
+        {translatedLayout.sectionTitle.hobbies}
       </TextWithIcon>
       <View style={styles.sectionContent}>
         {props.hobbies.map((hobby, index) => (

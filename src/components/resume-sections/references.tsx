@@ -1,9 +1,10 @@
 import { Text, View } from "@react-pdf/renderer";
 
-import type { Reference } from "@/me.ts";
+import type { Reference } from "@/me";
 
 import { Mail, Megaphone, Phone } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
+import { translatedLayout } from "@/layout-translations.ts";
 import { gridStyles, spacings, styles, typography } from "@/styles.ts";
 
 interface ReferencesProps {
@@ -16,7 +17,7 @@ export function References(props: ReferencesProps) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={Megaphone} variant="sectionTitle">
-        referências
+        {translatedLayout.sectionTitle.references}
       </TextWithIcon>
       <View style={grid.container}>
         {props.references.map((reference, index) => (

@@ -1,9 +1,10 @@
 import { Text, View } from "@react-pdf/renderer";
 
-import type { Skill } from "@/me.ts";
+import type { Skill } from "@/me";
 
 import { Toolbox } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
+import { translatedLayout } from "@/layout-translations.ts";
 import { styles, typography } from "@/styles.ts";
 
 interface SkillsProps {
@@ -14,7 +15,7 @@ export function Skills(props: SkillsProps) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={Toolbox} variant="sectionTitle">
-        habilidades
+        {translatedLayout.sectionTitle.skills}
       </TextWithIcon>
       <View style={styles.sectionContent}>
         {props.skills.map((skill, index) => (
