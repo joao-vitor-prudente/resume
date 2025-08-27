@@ -1,6 +1,5 @@
+import type { Image, Svg } from "@react-pdf/renderer";
 import type { ComponentProps, ComponentType } from "react";
-
-import { Svg } from "@react-pdf/renderer";
 
 import { Brazil, China, UnitedStates } from "@/components/flags";
 import {
@@ -51,7 +50,7 @@ export interface Job {
 }
 
 export interface Language {
-  flag: ComponentType<ComponentProps<typeof Svg>>;
+  flag: ComponentType<Omit<ComponentProps<typeof Image>, "source">>;
   name: string;
   proficiency: "advanced" | "beginner" | "fluent" | "native";
 }
