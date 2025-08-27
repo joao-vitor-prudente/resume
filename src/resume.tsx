@@ -12,21 +12,24 @@ import {
   Skills,
 } from "@/components/resume-sections";
 import { me } from "@/me.ts";
-import { spacings, styles, twoColumnGridStyles } from "@/styles.ts";
+import { gridStyles, spacings, styles } from "@/styles.ts";
 
 export function Resume() {
+  const grid = gridStyles(spacings.lg);
   return (
     <Document title="Resume">
       <Page size="A4" style={styles.page}>
         <Header {...me.about} {...me.contactInfo} />
         <Profile {...me.about} />
-        <View style={twoColumnGridStyles(spacings.xl).container}>
-          <View style={twoColumnGridStyles(spacings.xl, 34).item}>
-            <ContactInfo {...me.contactInfo} />
-            <Languages languages={me.languages} />
-            <Hobbies hobbies={me.hobbies} />
+        <View style={grid.container}>
+          <View style={grid.item("30%")}>
+            <View style={{ flexDirection: "column", gap: spacings.lg }}>
+              <ContactInfo {...me.contactInfo} />
+              <Languages languages={me.languages} />
+              <Hobbies hobbies={me.hobbies} />
+            </View>
           </View>
-          <View style={twoColumnGridStyles(spacings.xl, 66).item}>
+          <View style={grid.item("70%")}>
             <Skills skills={me.skills} />
           </View>
         </View>

@@ -69,10 +69,11 @@ export const typography = StyleSheet.create({
   subtitle: {
     color: colors.foregroundMuted,
     fontFamily: font.source,
-    fontSize: 8,
+    fontSize: 12,
     fontWeight: weight.regular,
     letterSpacing: 0.02,
     lineHeight: 1.3,
+    textAlign: "justify",
     textTransform: "uppercase",
   },
   title: {
@@ -105,6 +106,7 @@ export const styles = StyleSheet.create({
   page: {
     background: colors.background,
     flexDirection: "column",
+    gap: spacings.lg,
     padding: spacings.xl,
   },
   pageContent: {
@@ -139,9 +141,13 @@ export const listStyles = StyleSheet.create({
 });
 
 // not having access display grid or calc sure is a pain :(
-export function twoColumnGridStyles(gap: number, itemWidth = 50) {
-  return StyleSheet.create({
-    container: { flexDirection: "row", flexWrap: "wrap", margin: -gap },
-    item: { padding: gap, width: `${itemWidth.toString()}%` },
-  });
+export function gridStyles(gap: number) {
+  return {
+    container: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      margin: -gap,
+    } as const,
+    item: (width: string) => ({ padding: gap, width }) as const,
+  };
 }

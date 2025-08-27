@@ -82,9 +82,9 @@ export interface Skill {
 export const me: Me = {
   about: {
     name: "João Vitor Ceolin Prudente",
-    position: "Engenheiro de Software",
+    position: "Engenheiro de Software Full-Stack",
     profile:
-      "Engenheiro de software full-stack com quatro anos de experiência profissional na área, altamente capacitado em projetar e implementar soluções robustas para desafios complexos de negócio. Excepcionalmente organizado, metódico e detalhista, com paixão por programação e entrega de código de alta qualidade. Experiência inclui prática em sistemas distribuídos baseados em eventos, modelagem de domínio e de dados, além de design e desenvolvimento de UI. Um comunicador claro e sistemático, capaz de articular problemas, soluções e arquitetura de sistemas de maneira precisa e acessível. Dedicado a manter consistência e excelência em todos os aspectos do desenvolvimento de software.",
+      "Engenheiro de software full-stack com quatro anos de experiência profissional na área, altamente capacitado em projetar e implementar soluções robustas para desafios complexos de negócio. Excepcionalmente organizado, metódico e detalhista, com paixão por programação e entrega de código de alta qualidade. Um comunicador claro e sistemático, capaz de articular problemas, soluções e arquitetura de sistemas de maneira precisa e acessível. Dedicado a manter consistência e excelência em todos os aspectos do desenvolvimento de software.",
   },
   contactInfo: {
     address: "SHIN QI 3 conjunto 9, 24, Brasília, 71505-290, Brasil",
@@ -104,7 +104,6 @@ export const me: Me = {
   employmentHistory: [
     {
       activities: [
-        "Prestei assistência em múltiplos departamentos (como RH, faturamento, pessoal, compras, financeiro, licitação) para entender sua rotina, procurar por gargalos em processos e desenvolver soluções automatizadas.",
         "Desenvolvi sistemas de automação para aumentar a produtividade e escalabilidade das operações administrativas da empresa.",
       ],
       city: "Brasília",
@@ -210,7 +209,7 @@ export const me: Me = {
   skills: [
     {
       description:
-        "Trabalhei com desenvolvimento backend em Django, desenvolvimento de ETLs incluindo web scraping e pipeline de dados, implementação de redes neurais, tanto do zero quanto utilizando frameworks como Tensorflow e criação UIs para desktop com Eel.",
+        "Trabalhei com desenvolvimento backend em Django, desenvolvimento de ETLs incluindo web scraping e pipeline de dados, implementação de redes neurais e criação UIs para desktop.",
       icon: Python,
       title: "Python",
     },
@@ -240,7 +239,7 @@ export const me: Me = {
     },
     {
       description:
-        "Trabalhei com Dart/Flutter para desenvolvimento Android e brevemente com C, C#/Unity para desenvolvimento de jogos e Rust para desenvolvimento de CLIs.",
+        "Trabalhei com Dart/Flutter para desenvolvimento Android e brevemente com C, C#/Unity e Rust.",
       icon: CircleEllipsis,
       title: "Outras Linguagens",
     },

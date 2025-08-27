@@ -4,21 +4,23 @@ import type { Reference } from "@/me.ts";
 
 import { Mail, Megaphone, Phone } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
-import { spacings, styles, twoColumnGridStyles, typography } from "@/styles.ts";
+import { gridStyles, spacings, styles, typography } from "@/styles.ts";
 
 interface ReferencesProps {
   readonly references: Reference[];
 }
 
 export function References(props: ReferencesProps) {
+  const grid = gridStyles(spacings.md);
+
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={Megaphone} variant="sectionTitle">
         referências
       </TextWithIcon>
-      <View style={twoColumnGridStyles(spacings.md).container}>
+      <View style={grid.container}>
         {props.references.map((reference, index) => (
-          <View style={twoColumnGridStyles(spacings.md).item}>
+          <View style={grid.item("50%")}>
             <ReferenceCard {...reference} key={index} />
           </View>
         ))}
