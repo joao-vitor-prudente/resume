@@ -13,43 +13,41 @@ import {
   References,
   Skills,
 } from "@/components/resume-sections";
-import { me } from "@/me";
-import { RESUME_OPTIONS } from "@/options.ts";
+import { intl } from "@/intl";
 import { gridStyles, spacings, styles } from "@/styles";
 
 export function Resume() {
   const grid = gridStyles({ columns: 3, gap: spacings.xl });
-  const intlMe = me[RESUME_OPTIONS.language];
   return (
     <Document title="Resume">
       <Page size="A4" style={styles.page}>
         <View style={styles.pageHeader}>
-          <Header {...intlMe.about} {...intlMe.contactInfo} />
+          <Header {...intl.t.me.about} {...intl.t.me.contactInfo} />
         </View>
         <View style={styles.pageContent}>
-          <Profile {...intlMe.about} />
+          <Profile {...intl.t.me.about} />
           <View style={grid.container}>
             <View style={grid.item({ colspan: 1 })}>
               <View style={{ flexDirection: "column", gap: spacings.lg }}>
-                <ContactInfo {...intlMe.contactInfo} />
-                <Languages languages={intlMe.languages} />
-                <Projects {...intlMe.projects} />
-                <Hobbies hobbies={intlMe.hobbies} />
+                <ContactInfo {...intl.t.me.contactInfo} />
+                <Languages languages={intl.t.me.languages} />
+                <Projects {...intl.t.me.projects} />
+                <Hobbies hobbies={intl.t.me.hobbies} />
               </View>
             </View>
             <View style={grid.item({ colspan: 2 })}>
-              <Skills skills={intlMe.skills} />
+              <Skills skills={intl.t.me.skills} />
             </View>
           </View>
         </View>
         <View style={styles.pageFooter}>
-          <Footer {...intlMe.projects} />
+          <Footer {...intl.t.me.projects} />
         </View>
       </Page>
       <Page size="A4" style={styles.page}>
-        <Courses courses={intlMe.courses} />
-        <EmploymentHistory employmentHistory={intlMe.employmentHistory} />
-        <References references={intlMe.references} />
+        <Courses courses={intl.t.me.courses} />
+        <EmploymentHistory employmentHistory={intl.t.me.employmentHistory} />
+        <References references={intl.t.me.references} />
       </Page>
     </Document>
   );

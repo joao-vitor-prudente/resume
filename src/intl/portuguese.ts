@@ -29,3 +29,5 @@ export const portuguese = {
   references: { title: "referências" },
   skills: { title: "habilidades" },
 };
+
+export type Translations = typeof portuguese;

@@ -16,7 +16,7 @@ export function Courses(props: CoursesProps) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={GraduationCap} variant="sectionTitle">
-        {intl.courses.title}
+        {intl.t.courses.title}
       </TextWithIcon>
       <View style={styles.sectionContent}>
         {props.courses.map((course, index) => (
@@ -40,7 +40,7 @@ function CourseCard(props: Course) {
         <Text style={typography.body}>{props.description}</Text>
         <TextWithIcon Icon={LinkIcon}>
           <Link href={props.diplomaUrl} style={typography.body}>
-            {capitalize(intl.courses.link)}
+            {capitalize(intl.t.courses.link)}
           </Link>
         </TextWithIcon>
       </View>

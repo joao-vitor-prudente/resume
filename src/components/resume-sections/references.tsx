@@ -13,11 +13,10 @@ interface ReferencesProps {
 
 export function References(props: ReferencesProps) {
   const grid = gridStyles({ columns: 2, gap: spacings.md });
-
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={Megaphone} variant="sectionTitle">
-        {intl.references.title}
+        {intl.t.references.title}
       </TextWithIcon>
       <View style={grid.container}>
         {props.references.map((reference, index) => (

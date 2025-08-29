@@ -1,6 +1,6 @@
-import type { portuguese } from "@/intl/portuguese.ts";
+import type { Translations } from "@/intl/portuguese.ts";
 
-export const english: typeof portuguese = {
+export const english: Translations = {
   contactInfo: { title: "contact information" },
   courses: { link: "diploma Url", title: "courses" },
   dateRange: { since: (date: string) => `since ${date}` },

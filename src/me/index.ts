@@ -1,5 +1,5 @@
+import type { SupportedLanguage } from "@/intl";
 import type { Me } from "@/me/type.ts";
-import type { SupportedLanguage } from "@/options.ts";
 
 import { portuguese } from "@/me/portuguese.ts";
 

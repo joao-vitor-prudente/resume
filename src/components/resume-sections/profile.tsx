@@ -11,7 +11,7 @@ export function Profile(props: About) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={User} variant="sectionTitle">
-        {intl.profile.title}
+        {intl.t.profile.title}
       </TextWithIcon>
       <View style={styles.sectionContent}>
         <Text style={typography.body}>{props.profile}</Text>

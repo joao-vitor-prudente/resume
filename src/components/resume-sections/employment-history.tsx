@@ -16,7 +16,7 @@ export function EmploymentHistory(props: EmploymentHistoryProps) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={BriefcaseBusiness} variant="sectionTitle">
-        {intl.employmentHistory.title}
+        {intl.t.employmentHistory.title}
       </TextWithIcon>
       <View style={styles.sectionContent}>
         {props.employmentHistory.map((job, index) => (
@@ -32,14 +32,14 @@ function JobCard(props: Job) {
     <View style={styles.card}>
       <View style={styles.cardHeader}>
         <Text style={typography.cardTitle}>
-          {intl.employmentHistory.jobTitle(
+          {intl.t.employmentHistory.jobTitle(
             props.position,
             props.company,
             props.city,
           )}
         </Text>
         <Text style={typography.cardSubtitle}>
-          {formatDateRange(props.from, props.to)}
+          {formatDateRange(props.from, props.to, intl)}
         </Text>
       </View>
       <View style={styles.cardContent}>

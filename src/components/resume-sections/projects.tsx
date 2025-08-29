@@ -12,19 +12,19 @@ export function Projects(props: Projects) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={Rocket} variant="sectionTitle">
-        {intl.projects.title}
+        {intl.t.projects.title}
       </TextWithIcon>
       <View style={styles.sectionContent}>
         <View style={styles.card}>
           <View style={styles.cardHeader}>
             <TextWithIcon Icon={Github} variant="cardTitle">
-              {capitalize(intl.projects.github.title)}
+              {capitalize(intl.t.projects.github.title)}
             </TextWithIcon>
           </View>
           <View style={styles.cardContent}>
             <TextWithIcon Icon={LinkIcon}>
               <Link href={props.github} style={typography.body}>
-                {capitalize(intl.projects.github.link)}
+                {capitalize(intl.t.projects.github.link)}
               </Link>
             </TextWithIcon>
           </View>

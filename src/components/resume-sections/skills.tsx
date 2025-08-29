@@ -15,7 +15,7 @@ export function Skills(props: SkillsProps) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={Toolbox} variant="sectionTitle">
-        {intl.skills.title}
+        {intl.t.skills.title}
       </TextWithIcon>
       <View style={styles.sectionContent}>
         {props.skills.map((skill, index) => (

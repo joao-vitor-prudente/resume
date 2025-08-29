@@ -19,10 +19,12 @@ const footerStyles = StyleSheet.create({
 export function Footer(props: Projects) {
   return (
     <View style={footerStyles.container}>
-      <Text style={typography.body}>{capitalize(intl.footer.description)}</Text>
+      <Text style={typography.body}>
+        {capitalize(intl.t.footer.description)}
+      </Text>
       <TextWithIcon Icon={LinkIcon}>
         <Link href={props.resume} style={typography.body}>
-          {capitalize(intl.footer.link)}
+          {capitalize(intl.t.footer.link)}
         </Link>
       </TextWithIcon>
     </View>
