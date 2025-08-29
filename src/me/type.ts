@@ -2,6 +2,7 @@ import type { Image, Svg } from "@react-pdf/renderer";
 import type { ComponentProps, ComponentType } from "react";
 
 export interface About {
+  github: string;
   name: string;
   position: string;
   profile: string;

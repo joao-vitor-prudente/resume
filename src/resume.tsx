@@ -8,6 +8,7 @@ import {
   Hobbies,
   Languages,
   Profile,
+  Projects,
   References,
   Skills,
 } from "@/components/resume-sections";
@@ -28,6 +29,7 @@ export function Resume() {
             <View style={{ flexDirection: "column", gap: spacings.lg }}>
               <ContactInfo {...translatedMe.contactInfo} />
               <Languages languages={translatedMe.languages} />
+              <Projects {...translatedMe.about} />
               <Hobbies hobbies={translatedMe.hobbies} />
             </View>
           </View>

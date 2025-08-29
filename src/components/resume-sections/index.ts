@@ -5,5 +5,6 @@ export { Header } from "@/components/resume-sections/header.tsx";
 export { Hobbies } from "@/components/resume-sections/hobbies.tsx";
 export { Languages } from "@/components/resume-sections/languages.tsx";
 export { Profile } from "@/components/resume-sections/profile.tsx";
+export { Projects } from "@/components/resume-sections/projects.tsx";
 export { References } from "@/components/resume-sections/references.tsx";
 export { Skills } from "@/components/resume-sections/skills.tsx";

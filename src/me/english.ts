@@ -16,6 +16,7 @@ import {
 
 export const english: Me = {
   about: {
+    github: "https://github.com/joao-vitor-prudente",
     name: "João Vitor Ceolin Prudente",
     position: "Full-Stack Software Engineer",
     profile:
