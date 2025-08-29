@@ -23,7 +23,7 @@ export const portuguese = {
   },
   profile: { title: "perfil" },
   projects: {
-    github: { link: "link do perfil do GitHub", title: "GitHub" },
+    github: { link: "link do perfil", title: "GitHub" },
     title: "projetos",
   },
   references: { title: "referências" },

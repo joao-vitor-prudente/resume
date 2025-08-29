@@ -25,7 +25,7 @@ export const english: Translations = {
   },
   profile: { title: "profile" },
   projects: {
-    github: { link: "GitHub profile Url", title: "GitHub" },
+    github: { link: "profile Url", title: "GitHub" },
     title: "projects",
   },
   references: { title: "references" },
