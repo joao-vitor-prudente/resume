@@ -5,14 +5,14 @@ import type { Reference } from "@/me";
 import { Mail, Megaphone, Phone } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
 import { translatedLayout } from "@/layout-translations.ts";
-import { gridStyles, spacings, styles, typography } from "@/styles.ts";
+import { gridStyles, spacings, styles, typography } from "@/styles";
 
 interface ReferencesProps {
   readonly references: Reference[];
 }
 
 export function References(props: ReferencesProps) {
-  const grid = gridStyles(spacings.md);
+  const grid = gridStyles({ columns: 2, gap: spacings.md });
 
   return (
     <View style={styles.section}>
@@ -21,7 +21,7 @@ export function References(props: ReferencesProps) {
       </TextWithIcon>
       <View style={grid.container}>
         {props.references.map((reference, index) => (
-          <View style={grid.item("50%")}>
+          <View style={grid.item({ colspan: 1 })}>
             <ReferenceCard {...reference} key={index} />
           </View>
         ))}

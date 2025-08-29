@@ -5,7 +5,7 @@ import type { Language } from "@/me";
 import { Languages as LanguagesIcon } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
 import { translatedLayout } from "@/layout-translations.ts";
-import { spacings, styles, typography } from "@/styles.ts";
+import { spacings, styles, typography } from "@/styles";
 import { capitalize } from "@/utlis.ts";
 
 interface LanguagesProps {

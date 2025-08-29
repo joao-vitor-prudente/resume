@@ -5,7 +5,7 @@ import type { Job } from "@/me";
 import { BriefcaseBusiness } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
 import { translatedLayout } from "@/layout-translations.ts";
-import { listStyles, styles, typography } from "@/styles.ts";
+import { listStyles, styles, typography } from "@/styles";
 import { formatDateRange } from "@/utlis.ts";
 
 interface EmploymentHistoryProps {

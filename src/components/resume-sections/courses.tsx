@@ -5,7 +5,7 @@ import type { Course } from "@/me";
 import { BookOpen, GraduationCap, Link as LinkIcon } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
 import { translatedLayout } from "@/layout-translations.ts";
-import { styles, typography } from "@/styles.ts";
+import { styles, typography } from "@/styles";
 import { capitalize } from "@/utlis.ts";
 
 interface CoursesProps {

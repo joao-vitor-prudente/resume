@@ -2,7 +2,7 @@ import type { ComponentProps, ComponentType, ReactNode } from "react";
 
 import { StyleSheet, type Svg, Text, View } from "@react-pdf/renderer";
 
-import { colors, spacings, typography } from "@/styles.ts";
+import { colors, spacings, typography } from "@/styles";
 
 interface TextWithIconProps {
   readonly children: ReactNode;

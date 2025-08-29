@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from "@react-pdf/renderer";
 
 import type { About, ContactInfo } from "@/me";
 
-import { colors, spacings, typography } from "@/styles.ts";
+import { colors, spacings, typography } from "@/styles";
 
 const headerStyles = StyleSheet.create({
   container: {

@@ -5,7 +5,7 @@ import type { About } from "@/me";
 import { Github, Link as LinkIcon, Rocket } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
 import { translatedLayout } from "@/layout-translations.ts";
-import { styles, typography } from "@/styles.ts";
+import { styles, typography } from "@/styles";
 import { capitalize } from "@/utlis.ts";
 
 export function Projects(props: About) {

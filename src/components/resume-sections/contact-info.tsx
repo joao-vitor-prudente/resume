@@ -5,7 +5,7 @@ import type { ContactInfo } from "@/me";
 import { House, List, Mail, Phone } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
 import { translatedLayout } from "@/layout-translations.ts";
-import { styles } from "@/styles.ts";
+import { styles } from "@/styles";
 
 export function ContactInfo(props: ContactInfo) {
   return (

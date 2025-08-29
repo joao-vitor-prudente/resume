@@ -5,7 +5,7 @@ import type { Hobby } from "@/me";
 import { Palette } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
 import { translatedLayout } from "@/layout-translations.ts";
-import { styles } from "@/styles.ts";
+import { styles } from "@/styles";
 
 interface HobbiesProps {
   readonly hobbies: Hobby[];

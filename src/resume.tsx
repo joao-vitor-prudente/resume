@@ -14,10 +14,10 @@ import {
 } from "@/components/resume-sections";
 import { me } from "@/me";
 import { RESUME_OPTIONS } from "@/options.ts";
-import { gridStyles, spacings, styles } from "@/styles.ts";
+import { gridStyles, spacings, styles } from "@/styles";
 
 export function Resume() {
-  const grid = gridStyles(spacings.lg);
+  const grid = gridStyles({ columns: 3, gap: spacings.lg });
   const translatedMe = me[RESUME_OPTIONS.language];
   return (
     <Document title="Resume">
@@ -25,7 +25,7 @@ export function Resume() {
         <Header {...translatedMe.about} {...translatedMe.contactInfo} />
         <Profile {...translatedMe.about} />
         <View style={grid.container}>
-          <View style={grid.item("30%")}>
+          <View style={grid.item({ colspan: 1 })}>
             <View style={{ flexDirection: "column", gap: spacings.lg }}>
               <ContactInfo {...translatedMe.contactInfo} />
               <Languages languages={translatedMe.languages} />
@@ -33,7 +33,7 @@ export function Resume() {
               <Hobbies hobbies={translatedMe.hobbies} />
             </View>
           </View>
-          <View style={grid.item("70%")}>
+          <View style={grid.item({ colspan: 2 })}>
             <Skills skills={translatedMe.skills} />
           </View>
         </View>

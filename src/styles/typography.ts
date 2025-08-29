@@ -3,25 +3,10 @@ import { Font, StyleSheet } from "@react-pdf/renderer";
 import { font, weight } from "@/assets/fonts";
 import { oswaldFamily } from "@/assets/fonts/oswald";
 import { sourceSansProFamily } from "@/assets/fonts/source-sans-pro";
+import { colors } from "@/styles/constants.ts";
 
 oswaldFamily.forEach(Font.register);
 sourceSansProFamily.forEach(Font.register);
-
-export const colors = {
-  background: "#fafafa", // 50
-  backgroundMuted: "#f4f4f5", // 100
-  border: "#d4d4d8", // 300
-  foreground: "#09090b", // 950
-  foregroundMuted: "#52525c", // 600
-} as const;
-
-export const spacings = {
-  lg: 16,
-  md: 8,
-  sm: 4,
-  xl: 32,
-  xs: 2,
-} as const;
 
 export const typography = StyleSheet.create({
   body: {
@@ -86,68 +71,3 @@ export const typography = StyleSheet.create({
     textTransform: "uppercase",
   },
 });
-
-export const styles = StyleSheet.create({
-  card: {
-    backgroundColor: colors.backgroundMuted,
-    borderRadius: spacings.sm,
-    flexDirection: "column",
-    gap: spacings.md,
-    padding: spacings.md,
-  },
-  cardContent: {
-    flexDirection: "column",
-    gap: spacings.sm,
-  },
-  cardHeader: {
-    flexDirection: "column",
-    gap: spacings.xs,
-  },
-  page: {
-    background: colors.background,
-    flexDirection: "column",
-    gap: spacings.lg,
-    padding: spacings.xl,
-  },
-  pageContent: {
-    flexGrow: 1,
-  },
-  pageFooter: {
-    borderTopColor: colors.border,
-    borderTopStyle: "solid",
-    borderTopWidth: 1,
-    flexDirection: "column",
-  },
-  section: {
-    flexDirection: "column",
-    gap: spacings.md,
-  },
-  sectionContent: {
-    flexDirection: "column",
-    gap: spacings.sm,
-  },
-});
-
-export const listStyles = StyleSheet.create({
-  list: {
-    borderLeftColor: colors.border,
-    borderLeftStyle: "solid",
-    borderLeftWidth: 0.5,
-    flexDirection: "column",
-    gap: spacings.sm,
-    paddingLeft: spacings.md,
-  },
-  listItem: { ...typography.body, lineHeight: 1.2 },
-});
-
-// not having access display grid or calc sure is a pain :(
-export function gridStyles(gap: number) {
-  return {
-    container: {
-      flexDirection: "row",
-      flexWrap: "wrap",
-      margin: -gap,
-    } as const,
-    item: (width: string) => ({ padding: gap, width }) as const,
-  };
-}
