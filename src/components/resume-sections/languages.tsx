@@ -16,7 +16,7 @@ export function Languages(props: LanguagesProps) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={LanguagesIcon} variant="sectionTitle">
-        {translatedLayout.sectionTitle.languages}
+        {translatedLayout.languages.title}
       </TextWithIcon>
       <View style={styles.sectionContent}>
         {props.languages.map((language, index) => (
@@ -45,7 +45,9 @@ function LanguageItem(props: Language) {
         <Text style={typography.body}>{props.name}</Text>
       </View>
       <Text style={typography.bodyMuted}>
-        {capitalize(translatedLayout.languageProficiency[props.proficiency])}
+        {capitalize(
+          translatedLayout.languages.languageProficiency[props.proficiency],
+        )}
       </Text>
     </View>
   );

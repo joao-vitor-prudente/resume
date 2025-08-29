@@ -11,7 +11,7 @@ export function ContactInfo(props: ContactInfo) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={List} variant="sectionTitle">
-        {translatedLayout.sectionTitle.contactInfo}
+        {translatedLayout.contactInfo.title}
       </TextWithIcon>
       <View style={styles.sectionContent}>
         <TextWithIcon Icon={House}>{props.address}</TextWithIcon>

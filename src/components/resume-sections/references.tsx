@@ -17,7 +17,7 @@ export function References(props: ReferencesProps) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={Megaphone} variant="sectionTitle">
-        {translatedLayout.sectionTitle.references}
+        {translatedLayout.references.title}
       </TextWithIcon>
       <View style={grid.container}>
         {props.references.map((reference, index) => (

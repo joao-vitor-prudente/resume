@@ -7,7 +7,7 @@ export function capitalize(str: string): string {
 
 export function formatDateRange(from: Date, to?: Date): string {
   if (to) return `${formatDate(to)} - ${formatDate(to)}`;
-  return `${translatedLayout.date.since} ${formatDate(from)}`;
+  return translatedLayout.dateRange.since(formatDate(from));
 }
 
 function formatDate(date: Date): string {

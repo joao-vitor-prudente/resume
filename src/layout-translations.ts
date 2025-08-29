@@ -1,49 +1,59 @@
 import { RESUME_OPTIONS, type SupportedLanguage } from "@/options.ts";
 
 const portuguese = {
-  date: {
-    since: "desde",
+  contactInfo: { title: "informações de contato" },
+  courses: { link: "link do diploma", title: "cursos" },
+  dateRange: { since: (date: string) => `desde ${date}` },
+  employmentHistory: {
+    jobTitle: (position: string, company: string, city: string) =>
+      `${position} em ${company} - ${city}`,
+    title: "histórico empregatício",
   },
-  languageProficiency: {
-    advanced: "avançado",
-    beginner: "iniciante",
-    fluent: "fluente",
-    native: "nativo",
+  hobbies: { title: "hobbies" },
+  languages: {
+    languageProficiency: {
+      advanced: "avançado",
+      beginner: "iniciante",
+      fluent: "fluente",
+      native: "nativo",
+    },
+    title: "idiomas",
   },
-  sectionTitle: {
-    contactInfo: "informações de contato",
-    courses: "cursos",
-    employmentHistory: "histórico empregatício",
-    hobbies: "hobbies",
-    languages: "idiomas",
-    profile: "perfil",
-    projects: "projetos",
-    references: "referências",
-    skills: "habilidades",
+  profile: { title: "perfil" },
+  projects: {
+    github: { link: "link do perfil do GitHub", title: "GitHub" },
+    title: "projetos",
   },
+  references: { title: "referências" },
+  skills: { title: "habilidades" },
 };
 
 const english: typeof portuguese = {
-  date: {
-    since: "since",
+  contactInfo: { title: "contact information" },
+  courses: { link: "diploma Url", title: "courses" },
+  dateRange: { since: (date: string) => `since ${date}` },
+  employmentHistory: {
+    jobTitle: (position: string, company: string, city: string) =>
+      `${position} at ${company} - ${city}`,
+    title: "employment history",
   },
-  languageProficiency: {
-    advanced: "advanced",
-    beginner: "beginner",
-    fluent: "fluent",
-    native: "native",
+  hobbies: { title: "hobbies" },
+  languages: {
+    languageProficiency: {
+      advanced: "advanced",
+      beginner: "beginner",
+      fluent: "fluent",
+      native: "native",
+    },
+    title: "languages",
   },
-  sectionTitle: {
-    contactInfo: "contact information",
-    courses: "courses",
-    employmentHistory: "employment history",
-    hobbies: "hobbies",
-    languages: "languages",
-    profile: "profile",
-    projects: "projects",
-    references: "references",
-    skills: "skills",
+  profile: { title: "profile" },
+  projects: {
+    github: { link: "GitHub profile Url", title: "GitHub" },
+    title: "projects",
   },
+  references: { title: "references" },
+  skills: { title: "skills" },
 };
 
 const layoutTranslations: Record<SupportedLanguage, typeof portuguese> = {

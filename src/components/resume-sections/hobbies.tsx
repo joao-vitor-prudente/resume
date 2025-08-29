@@ -15,7 +15,7 @@ export function Hobbies(props: HobbiesProps) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={Palette} variant="sectionTitle">
-        {translatedLayout.sectionTitle.hobbies}
+        {translatedLayout.hobbies.title}
       </TextWithIcon>
       <View style={styles.sectionContent}>
         {props.hobbies.map((hobby, index) => (
