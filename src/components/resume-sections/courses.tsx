@@ -4,7 +4,7 @@ import type { Course } from "@/me";
 
 import { BookOpen, GraduationCap, Link as LinkIcon } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
-import { translatedLayout } from "@/layout-translations.ts";
+import { intl } from "@/intl";
 import { styles, typography } from "@/styles";
 import { capitalize } from "@/utlis.ts";
 
@@ -16,7 +16,7 @@ export function Courses(props: CoursesProps) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={GraduationCap} variant="sectionTitle">
-        {translatedLayout.courses.title}
+        {intl.courses.title}
       </TextWithIcon>
       <View style={styles.sectionContent}>
         {props.courses.map((course, index) => (
@@ -40,7 +40,7 @@ function CourseCard(props: Course) {
         <Text style={typography.body}>{props.description}</Text>
         <TextWithIcon Icon={LinkIcon}>
           <Link href={props.diplomaUrl} style={typography.body}>
-            {capitalize(translatedLayout.courses.link)}
+            {capitalize(intl.courses.link)}
           </Link>
         </TextWithIcon>
       </View>

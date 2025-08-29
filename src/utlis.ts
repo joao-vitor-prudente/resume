@@ -1,4 +1,4 @@
-import { translatedLayout } from "@/layout-translations.ts";
+import { intl } from "@/intl";
 import { RESUME_OPTIONS } from "@/options.ts";
 
 export function capitalize(str: string): string {
@@ -7,7 +7,7 @@ export function capitalize(str: string): string {
 
 export function formatDateRange(from: Date, to?: Date): string {
   if (to) return `${formatDate(to)} - ${formatDate(to)}`;
-  return translatedLayout.dateRange.since(formatDate(from));
+  return intl.dateRange.since(formatDate(from));
 }
 
 function formatDate(date: Date): string {

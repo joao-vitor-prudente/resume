@@ -4,7 +4,7 @@ import type { Reference } from "@/me";
 
 import { Mail, Megaphone, Phone } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
-import { translatedLayout } from "@/layout-translations.ts";
+import { intl } from "@/intl";
 import { gridStyles, spacings, styles, typography } from "@/styles";
 
 interface ReferencesProps {
@@ -17,7 +17,7 @@ export function References(props: ReferencesProps) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={Megaphone} variant="sectionTitle">
-        {translatedLayout.references.title}
+        {intl.references.title}
       </TextWithIcon>
       <View style={grid.container}>
         {props.references.map((reference, index) => (

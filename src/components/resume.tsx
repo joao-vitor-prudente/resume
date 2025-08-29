@@ -19,37 +19,37 @@ import { gridStyles, spacings, styles } from "@/styles";
 
 export function Resume() {
   const grid = gridStyles({ columns: 3, gap: spacings.xl });
-  const translatedMe = me[RESUME_OPTIONS.language];
+  const intlMe = me[RESUME_OPTIONS.language];
   return (
     <Document title="Resume">
       <Page size="A4" style={styles.page}>
         <View style={styles.pageHeader}>
-          <Header {...translatedMe.about} {...translatedMe.contactInfo} />
+          <Header {...intlMe.about} {...intlMe.contactInfo} />
         </View>
         <View style={styles.pageContent}>
-          <Profile {...translatedMe.about} />
+          <Profile {...intlMe.about} />
           <View style={grid.container}>
             <View style={grid.item({ colspan: 1 })}>
               <View style={{ flexDirection: "column", gap: spacings.lg }}>
-                <ContactInfo {...translatedMe.contactInfo} />
-                <Languages languages={translatedMe.languages} />
-                <Projects {...translatedMe.projects} />
-                <Hobbies hobbies={translatedMe.hobbies} />
+                <ContactInfo {...intlMe.contactInfo} />
+                <Languages languages={intlMe.languages} />
+                <Projects {...intlMe.projects} />
+                <Hobbies hobbies={intlMe.hobbies} />
               </View>
             </View>
             <View style={grid.item({ colspan: 2 })}>
-              <Skills skills={translatedMe.skills} />
+              <Skills skills={intlMe.skills} />
             </View>
           </View>
         </View>
         <View style={styles.pageFooter}>
-          <Footer {...translatedMe.projects} />
+          <Footer {...intlMe.projects} />
         </View>
       </Page>
       <Page size="A4" style={styles.page}>
-        <Courses courses={translatedMe.courses} />
-        <EmploymentHistory employmentHistory={translatedMe.employmentHistory} />
-        <References references={translatedMe.references} />
+        <Courses courses={intlMe.courses} />
+        <EmploymentHistory employmentHistory={intlMe.employmentHistory} />
+        <References references={intlMe.references} />
       </Page>
     </Document>
   );

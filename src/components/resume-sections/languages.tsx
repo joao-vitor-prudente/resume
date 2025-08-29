@@ -4,7 +4,7 @@ import type { Language } from "@/me";
 
 import { Languages as LanguagesIcon } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
-import { translatedLayout } from "@/layout-translations.ts";
+import { intl } from "@/intl";
 import { spacings, styles, typography } from "@/styles";
 import { capitalize } from "@/utlis.ts";
 
@@ -16,7 +16,7 @@ export function Languages(props: LanguagesProps) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={LanguagesIcon} variant="sectionTitle">
-        {translatedLayout.languages.title}
+        {intl.languages.title}
       </TextWithIcon>
       <View style={styles.sectionContent}>
         {props.languages.map((language, index) => (
@@ -45,9 +45,7 @@ function LanguageItem(props: Language) {
         <Text style={typography.body}>{props.name}</Text>
       </View>
       <Text style={typography.bodyMuted}>
-        {capitalize(
-          translatedLayout.languages.languageProficiency[props.proficiency],
-        )}
+        {capitalize(intl.languages.languageProficiency[props.proficiency])}
       </Text>
     </View>
   );

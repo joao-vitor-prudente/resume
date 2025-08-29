@@ -4,7 +4,7 @@ import type { Skill } from "@/me";
 
 import { Toolbox } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
-import { translatedLayout } from "@/layout-translations.ts";
+import { intl } from "@/intl";
 import { styles, typography } from "@/styles";
 
 interface SkillsProps {
@@ -15,7 +15,7 @@ export function Skills(props: SkillsProps) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={Toolbox} variant="sectionTitle">
-        {translatedLayout.skills.title}
+        {intl.skills.title}
       </TextWithIcon>
       <View style={styles.sectionContent}>
         {props.skills.map((skill, index) => (

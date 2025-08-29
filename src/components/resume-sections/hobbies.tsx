@@ -4,7 +4,7 @@ import type { Hobby } from "@/me";
 
 import { Palette } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
-import { translatedLayout } from "@/layout-translations.ts";
+import { intl } from "@/intl";
 import { styles } from "@/styles";
 
 interface HobbiesProps {
@@ -15,7 +15,7 @@ export function Hobbies(props: HobbiesProps) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={Palette} variant="sectionTitle">
-        {translatedLayout.hobbies.title}
+        {intl.hobbies.title}
       </TextWithIcon>
       <View style={styles.sectionContent}>
         {props.hobbies.map((hobby, index) => (
