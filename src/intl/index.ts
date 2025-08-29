@@ -9,7 +9,10 @@ export interface Intl {
 
 export type SupportedLanguage = "en-US" | "pt-BR";
 
-const translations = { "en-US": english, "pt-BR": portuguese };
+const translations: Record<SupportedLanguage, Translations> = {
+  "en-US": english,
+  "pt-BR": portuguese,
+};
 
 const language = import.meta.env.VITE_LANGUAGE as SupportedLanguage;
 const t = { ...translations[language], me: me[language] };

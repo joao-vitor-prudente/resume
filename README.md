@@ -1,69 +1,42 @@
-# React + TypeScript + Vite
+# Resume
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal resume in portuguese and english generated using ReactJS and react-pdf.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://react.dev/)
+- [React PDF](https://react-pdf.org/)
+- [Vite](https://vite.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-## Expanding the ESLint configuration
+## How to run
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+In the .env file set the language `VITE_LANGUAGE=pt-BR` or `VITE_LANGUAGE=en-US`
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Run `npm run dev`
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## How to use as template
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Fork the project
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Change resume contents
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Change the content of the files in the `src/me/portuguese.ts` and `src/me/english.ts`.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Add new language
+
+1. Add the language code to `SupportedLanguage` in `src/intl/index.ts`. It should be compatible with node's Intl Locales.
+2. Create a `src/intl/<language>.ts` file with the translations following the structure in the other language files.
+3. Add the new translation to the translations record in `src/intl/index.ts`.
+4. Create a `src/me/<language>.ts` file with the resume content following the structure in the other language files.
+5. Add the new translation to the translations record in `src/me/index.ts`.
+
+### Change the layout of the resume
+
+Change the `<Resume/>` component in `src/components/Resume.tsx` as you see fit. 
+
+## Credits
+
+Most of the icons used are based on the [Lucide](https://lucide.dev/) icons.
+
+The colors used are based on the [Tailwind](https://tailwindcss.com/) zinc color palette.
