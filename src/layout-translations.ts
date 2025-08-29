@@ -9,6 +9,10 @@ const portuguese = {
       `${position} em ${company} - ${city}`,
     title: "histórico empregatício",
   },
+  footer: {
+    description: "este currículo foi gerado com ReactJS.",
+    link: "link do código fonte",
+  },
   hobbies: { title: "hobbies" },
   languages: {
     languageProficiency: {
@@ -36,6 +40,10 @@ const english: typeof portuguese = {
     jobTitle: (position: string, company: string, city: string) =>
       `${position} at ${company} - ${city}`,
     title: "employment history",
+  },
+  footer: {
+    description: "this resume was generated using ReactJS.",
+    link: "source code Url",
   },
   hobbies: { title: "hobbies" },
   languages: {

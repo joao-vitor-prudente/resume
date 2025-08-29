@@ -2,7 +2,6 @@ import type { Image, Svg } from "@react-pdf/renderer";
 import type { ComponentProps, ComponentType } from "react";
 
 export interface About {
-  github: string;
   name: string;
   position: string;
   profile: string;
@@ -49,8 +48,14 @@ export interface Me {
   employmentHistory: Job[];
   hobbies: Hobby[];
   languages: Language[];
+  projects: Projects;
   references: Reference[];
   skills: Skill[];
+}
+
+export interface Projects {
+  github: string;
+  resume: string;
 }
 
 export interface Reference {

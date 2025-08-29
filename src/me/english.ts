@@ -16,7 +16,6 @@ import {
 
 export const english: Me = {
   about: {
-    github: "https://github.com/joao-vitor-prudente",
     name: "João Vitor Ceolin Prudente",
     position: "Full-Stack Software Engineer",
     profile:
@@ -113,6 +112,10 @@ export const english: Me = {
       proficiency: "beginner",
     },
   ],
+  projects: {
+    github: "https://github.com/joao-vitor-prudente",
+    resume: "https://github.com/joao-vitor-prudente/resume",
+  },
   references: [
     {
       company: "Grupo 5 Estrelas Serviços de Apoio Administrativo",

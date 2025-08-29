@@ -26,13 +26,22 @@ export const styles = StyleSheet.create({
     padding: spacings.xl,
   },
   pageContent: {
+    flexDirection: "column",
     flexGrow: 1,
+    gap: spacings.lg,
   },
   pageFooter: {
     borderTopColor: colors.border,
     borderTopStyle: "solid",
     borderTopWidth: 1,
     flexDirection: "column",
+    paddingTop: spacings.lg,
+  },
+  pageHeader: {
+    borderBottomColor: colors.border,
+    borderBottomStyle: "solid",
+    borderBottomWidth: 1,
+    paddingBottom: spacings.lg,
   },
   section: {
     flexDirection: "column",

@@ -1,6 +1,6 @@
 import { Link, View } from "@react-pdf/renderer";
 
-import type { About } from "@/me";
+import type { Projects } from "@/me";
 
 import { Github, Link as LinkIcon, Rocket } from "@/components/icons";
 import { TextWithIcon } from "@/components/text-with-icon.tsx";
@@ -8,7 +8,7 @@ import { translatedLayout } from "@/layout-translations.ts";
 import { styles, typography } from "@/styles";
 import { capitalize } from "@/utlis.ts";
 
-export function Projects(props: About) {
+export function Projects(props: Projects) {
   return (
     <View style={styles.section}>
       <TextWithIcon Icon={Rocket} variant="sectionTitle">
